@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>List</title>
+    <link href="/main.css" rel="stylesheet">
+</head>
+<body>
+    <div th:replace="~{ nav.html::navbar}"></div>
+
+    <div class="post" th:each="post : ${posts}">
+        <h4 th:text="${post.title}">title</h4>
+        <p th:text="${post.content}">content</p>
+        <p th:text="${post.author}">author</p>
+        <p th:text="${post.date}">date</p>
+    </div>
+</body>
+</html>
