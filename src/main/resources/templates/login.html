@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link href="/main.css" rel="stylesheet">
+</head>
+<body>
+<div th:replace="~{ nav.html::navbar}"></div>
+
+<div th:if="${param.error}">
+  <h4>아이디나 비번이 틀렸습니다</h4>
+</div>
+
+<form action="/login" method="POST">
+  <input name="username" placeholder="username">
+  <input name="password" type="password" placeholder="password">
+  <button type="submit">로그인</button>
+</form>
+
+<button onclick="window.location.href='/register'">회원가입</button>
+
+
+</body>
+</html>

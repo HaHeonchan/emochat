@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>List</title>
+    <link href="/main.css" rel="stylesheet">
+</head>
+<body>
+    <div th:replace="~{ nav.html::navbar}"></div>
+
+    <div class="auth">
+        <span sec:authentication="principal.username"></span>
+    </div>
+
+</body>
+</html>

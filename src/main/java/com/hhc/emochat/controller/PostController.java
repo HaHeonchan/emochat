@@ -2,7 +2,7 @@ package com.hhc.emochat.controller;
 
 import com.hhc.emochat.entity.PostEntity;
 import com.hhc.emochat.repository.PostRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,13 +13,9 @@ import java.util.Map;
 import java.util.Optional;
 
 @Controller
+@RequiredArgsConstructor
 public class PostController {
     private final PostRepository postRepository;
-
-    @Autowired
-    public PostController(PostRepository postRepository) {
-        this.postRepository = postRepository;
-    }
 
     @GetMapping("/list")
     String postList(Model model) {
