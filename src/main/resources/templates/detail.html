@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Detail</title>
+    <link href="/main.css" rel="stylesheet">
+</head>
+<body>
+    <div th:replace="~{ nav.html::navbar }"></div>
+
+    <h3 th:text="${post.title}">title</h3>
+    <p th:text="${'auth : '+post.author}">author</p>
+    <p th:text="${'date : '+post.date}">date</p>
+    <p th:text="${post.content}">content</p>
+</body>
+</html>

@@ -12,10 +12,11 @@
     <div th:replace="~{ nav.html::navbar}"></div>
 
     <div class="post" th:each="post : ${posts}">
-        <h4 th:text="${post.title}">title</h4>
-        <p th:text="${post.content}">content</p>
-        <p th:text="${post.author}">author</p>
-        <p th:text="${post.date}">date</p>
+
+        <h3 th:text="${post.title}">title</h3>
+        <a th:href="@{ '/detail/' + ${post.id} }">aaaaaaa</a>
+        <p th:text="${'auth : '+post.author}">author</p>
+        <p th:text="${'date : '+post.date}">date</p>
     </div>
 </body>
 </html>
