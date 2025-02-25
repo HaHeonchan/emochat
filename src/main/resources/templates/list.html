@@ -14,8 +14,10 @@
             <p th:text="${'auth : '+post.author}">author</p>
             <p th:text="${'date : '+post.date}">date</p>
         </a>
-        <button th:attr="onclick=|window.location.href='/edit/' + ${post.id}|" >Edit</button>
-        <button th:attr="onclick=|deletePost(${post.id})|">Delete</button>
+        <div th:if="${username != null and username == post.author}">
+            <button th:attr="onclick=|window.location.href='/edit/' + ${post.id}|" >Edit</button>
+            <button th:attr="onclick=|deletePost(${post.id})|">Delete</button>
+        </div>
     </div>
 
     <script>
