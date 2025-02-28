@@ -9,5 +9,5 @@ public class EmochatApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(EmochatApplication.class, args);
 	}
-	//test
+	//maintest
 }
